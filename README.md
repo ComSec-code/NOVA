@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="logo.png" alt="NOVA logo" width="200">
+  <img src="https://via.placeholder.com/200x120/1a1a1a/ffffff?text=NOVA" alt="NOVA logo" width="200">
 </p>
 
 <h1 align="center">NOVA</h1>
@@ -27,38 +27,42 @@
 
 ---
 
-## 🔧 Architecture
+## 🏗️ Platform Components
+
+The NOVA platform consists of containerized microservices that work together seamlessly:
 
 ```
 nova-system/
 ├── ptt-server        # Encrypted WebRTC/SIP core
-├── dispatcher-ui     # Command & control interface
+├── dispatcher-ui     # Command & control interface  
 ├── auth-gateway      # Identity and access (OAuth2/SAML)
 ├── monitoring-stack  # Grafana · Prometheus · Loki
 ├── morpheus-agent    # (optional) AI threat detection
 └── lora-bridge       # (optional) Mesh communications
 ```
 
-**Tech Stack:** Kubernetes · Helm · Docker · WireGuard · Go · React · Grafana · eBPF
+**Built with:** Kubernetes · Helm · Docker · WireGuard · Go · React · Grafana · eBPF
 
 ---
 
-## 🚀 Quick Start
+## 🚀 Getting Started
+
+Deploy NOVA on your Kubernetes cluster in minutes:
 
 ```bash
-# Clone and deploy
+# 1. Clone the repository
 git clone https://github.com/ComSec-code/NOVA.git
 cd NOVA
 
-# Install on Kubernetes
+# 2. Deploy with Helm
 helm install nova ./deployments/helm/nova \
   --namespace nova-system --create-namespace
 
-# Access the interface
+# 3. Access the control interface
 kubectl port-forward svc/dispatcher-ui 8080:80 -n nova-system
 ```
 
-**→ Open:** [http://localhost:8080](http://localhost:8080)
+**Access the dashboard:** [http://localhost:8080](http://localhost:8080)
 
 ---
 
