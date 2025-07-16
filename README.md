@@ -1,8 +1,6 @@
 <p align="center">
   <img src="logo.png" alt="NOVA logo" width="190">
 </p>
-
-<h1 align="center">NOVA</h1>
 <p align="center"><b>New Operational Voice Architecture</b></p>
 <p align="center">Sovereign · Encrypted · Cloud‑Native</p>
 
